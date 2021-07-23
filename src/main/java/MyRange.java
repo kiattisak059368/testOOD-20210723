@@ -26,4 +26,19 @@ public class MyRange {
     public boolean isEndWithInclude() {
         return this.input.endsWith("]");
     }
+
+    public String getResult() {
+        int firstNumber = getStart();
+        int lastNumber = getEnd();
+        String result = "";
+        for (int i = firstNumber; i<=lastNumber;i++)
+        {
+            if (i != lastNumber)
+            result += i + ",";
+            else
+                result += i;
+        }
+        return result;
+
+    }
 }

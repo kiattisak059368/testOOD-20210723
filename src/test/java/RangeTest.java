@@ -5,6 +5,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class RangeTest {
 
+
+    @Test
+    @DisplayName("ข้อมูล [1,5) run getResult()")
+    public void case01() {
+        MyRange myRange = new  MyRange("[1,5)");
+        String result = myRange.getResult();
+        assertEquals("1,2,3,4" , result);
+    }
     @Test
     @DisplayName("ข้อมูล [1,5) run getEnd()")
     public void endNumberWithExclude() {
